@@ -10,7 +10,7 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "dave",
@@ -28,6 +28,9 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
     "@electron-forge/plugin-fuses": "^7.11.1",
     "@electron/fuses": "^1.8.0",
-    "electron": "39.2.7"
+    "@eslint/js": "^10.0.1",
+    "electron": "39.2.7",
+    "eslint": "^10.0.2",
+    "globals": "^17.3.0"
   }
 }
