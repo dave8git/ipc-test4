@@ -1,4 +1,4 @@
-## Code organization
+## Code organization [OPEN]
 
 ### Overview
 
@@ -15,7 +15,7 @@ As we can see in our codebase, we don't have any linting rules that enforce code
 
 You can use recommended configurations. 
 
-### Taska to do:
+### Tasks to do:
 
 - [ ] add eslint configuration
 - [ ] add prettier configuration
