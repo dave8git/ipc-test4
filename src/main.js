@@ -51,6 +51,13 @@ ipcMain.handle('get-files', async () => {
   return filesData;
 });
 
+// Tests test
+function sum(a, b) {
+  return a + b;
+}
+
+module.exports = { sum };
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
