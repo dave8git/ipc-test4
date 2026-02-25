@@ -12,7 +12,8 @@
     "publish": "electron-forge publish",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "echo \"No tests yet\""
   },
   "keywords": [],
   "author": "dave",
