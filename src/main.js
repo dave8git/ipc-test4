@@ -26,15 +26,15 @@ const createWindow = () => {
 };
 
 ipcMain.handle('get-files', async () => {
-  const { filePaths } = await dialog.showOpenDialog({ // The error is because dialog.showOpenDialog() does not return an array. It returns an object with two properties: cancled and filepaths
+  const { filePaths } = await dialog.showOpenDialog({
+    // The error is because dialog.showOpenDialog() does not return an array. It returns an object with two properties: cancled and filepaths
     properties: ['openFile', 'multiSelections'],
-    filters: [
-      { name: 'Music', extensions: ['mp3'] },
-    ],
+    filters: [{ name: 'Music', extensions: ['mp3'] }],
   });
 
-  const metadata = await Promise.all( // await zatrzyma aż zostanie odczytane i zwrócone w tablicy metadane dla każdego pliku
-    filePaths.map(file => mm.parseFile(file))
+  const metadata = await Promise.all(
+    // await zatrzyma aż zostanie odczytane i zwrócone w tablicy metadane dla każdego pliku
+    filePaths.map((file) => mm.parseFile(file))
   );
 
   const filesData = await Promise.all(
@@ -42,8 +42,7 @@ ipcMain.handle('get-files', async () => {
       const stats = await fs.stat(file);
       return {
         metadata: metadata[index],
-
-      }
+      };
     })
   );
 
@@ -51,6 +50,13 @@ ipcMain.handle('get-files', async () => {
   console.log('metadata', metadata);
   return filesData;
 });
+
+// Tests test
+function sum(a, b) {
+  return a + b;
+}
+
+module.exports = { sum };
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

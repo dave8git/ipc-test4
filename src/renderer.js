@@ -1,6 +1,6 @@
 const getFolderName = document.getElementById('btn-open-folder');
 const filterAll = document.getElementById('filter-all');
-const filterAudio= document.getElementById('filter-audio');
+const filterAudio = document.getElementById('filter-audio');
 const filterVideo = document.getElementById('filter-video');
 const filterFav = document.getElementById('filter-fav');
 const btnScan = document.getElementById('btn-scan');
@@ -25,13 +25,13 @@ const shuffleBtn = document.getElementById('btn-togle-shuffle');
 const fileList = document.getElementById('btn-toggle-shuffle');
 
 getFolderName.addEventListener('click', async () => {
-    const files = await window.electronAPI.getFiles();
+  const files = await window.electronAPI.getFiles();
 
-    console.log('files', files);
-    displayFiles(files);
+  console.log('files', files);
+  displayFiles(files);
 });
 
 function displayFiles(files) {
-    fileListContainer.innerHTML = '';
-    console.log(files);
+  fileListContainer.innerHTML = '';
+  console.log(files);
 }
