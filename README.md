@@ -26,13 +26,15 @@ The goal of this project is to create a practical tool that allows users not onl
 
 ### 1. Install dependiencies
 
-````bash
+```bash
 npm install
+```
 
 ### 2. Start the application (in development mode)
 
 ### Other available scripts
 
+```bash
 npm start         # Run the app in development mode
 npm run package   # Package the app without creating installers
 npm run make      # Create platform-specific distributables
@@ -41,6 +43,7 @@ npm run lint      # Run ESLint
 npm run format    # Format code using Prettier
 npm test          # Run tests with Vitest
 npm run test:watch # Run tests in watch/UI mode
+```
 
 ## Rules that we follow
 
@@ -83,16 +86,21 @@ The application folows the standard Electron architecture:
 An unhandled rejection has occurred inside Forge:
 Error: Cannot make for rpm, the following external binaries need to be installed: rpmbuild
 
-````
+```
 
 ### Solution
 
+```bash
 apt install rpm
+
+```
 
 ## How to build production package?
 
+```bash
 npm run make
 
+```
 ### This will generate platform-specific distributables using Electron Forge.
 
 ## License
